@@ -1,9 +1,11 @@
+
+
 "use client"; 
 import { useEffect, useState } from 'react';
-import Card from '../components/card/Card';
+import Card from '../../components/card/Card';
 
 
-const Home = () => {
+const BlogPage = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const Home = () => {
 
   return (
     <div className="container mx-auto p-4 flex flex-col items-center">
-  <h1 className="text-4xl font-bold mb-6">Home page</h1>
+  <h1 className="text-4xl font-bold mb-6">Blog Posts</h1>
   <div className="flex flex-col items-center space-y-4">
     {data.map((post) => (
       <Card key={post.id} {...post} />
@@ -28,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BlogPage;
